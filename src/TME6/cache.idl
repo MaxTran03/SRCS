@@ -1,0 +1,15 @@
+
+
+module cache {
+	typedef wstring  Donnee;
+	typedef wstring  Reference;
+
+	exception IOException {};
+	exception DoesNotExist { Reference r; };
+
+	interface FileSystem {
+		boolean lire (in Reference ref, out Donnee data) raises (DoesNotExist, IOException);
+		boolean ecrire (in Reference ref, in Donnee data) raises (IOException);
+	};
+
+};

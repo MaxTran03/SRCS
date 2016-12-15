@@ -1,0 +1,8 @@
+module HashDistante{
+	
+	interface HashDist{
+		boolean containsKey (in string key);
+		Object get (in string key);
+		void put (in string key, in Object val);
+	};
+};
